@@ -1,0 +1,20 @@
+[project]
+name = "mcp-server-glitchtip"
+version = "0.0.1"
+description = "MCP server for retrieving issues from Glitchtip"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx[socks]>=0.28.0",
+    "mcp>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = ["pyright>=1.1.389", "pytest>=8.3.3", "ruff>=0.8.0"]
+
+[project.scripts]
+mcp-server-glitchtip = "mcp_server_glitchtip:main"
